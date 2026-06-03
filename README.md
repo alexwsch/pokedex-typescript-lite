@@ -311,6 +311,14 @@ Branches utilizadas:
 Link do Kanban:
 
 https://trello.com/invite/b/6a1cd215befe7bd1b4e6faca/ATTIfbfc30fd2c0015836dd41d2ea0ac15504E61F732/pokedex-typescript-lite
+
+## Melhorias futuras
+
+- Criar menu interativo no terminal
+- Salvar catálogo em arquivo JSON
+- Exibir HP, ataque e defesa
+- Criar filtros por tipo
+
 ## Autor
 
 Alexandre Wetzstein Schumann
