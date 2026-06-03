@@ -4,7 +4,18 @@
 
 O Pokédex TypeScript Lite é uma aplicação desenvolvida em Node.js com TypeScript que consulta dados da PokeAPI e organiza os Pokémon encontrados em um catálogo local durante a execução do programa.
 
+## Fluxo da aplicação
+
+1. O sistema recebe o nome ou ID de um Pokémon.
+2. A função buscarPokemon realiza uma requisição para a PokeAPI.
+3. A resposta JSON é convertida para um objeto simplificado.
+4. O Pokémon pode ser adicionado ao catálogo local.
+5. O catálogo impede registros duplicados.
+6. Os Pokémon podem ser listados e removidos pelo ID.
+
+
 ## Objetivo
+
 
 Praticar os conceitos estudados no módulo:
 
@@ -84,6 +95,11 @@ src/
 ├── utils/
 └── main.ts
 ```
+A aplicação foi organizada em camadas para separar responsabilidades:
+
+- models: interfaces e tipos
+- services: regras de negócio e integração com API
+- main: ponto de entrada da aplicação
 
 ## Funcionalidades
 
@@ -110,7 +126,40 @@ Campos:
 - altura
 - peso
 
+Exemplo:
+
+```json
+{
+  "id": 25,
+  "nome": "pikachu",
+  "tipos": ["electric"],
+  "altura": 4,
+  "peso": 60
+}
+```
+## Repositório
+
+https://github.com/alexwsch/pokedex-typescript-lite
+
+## Consumo da API
+
+A aplicação utiliza a função fetch do Node.js para consultar a PokeAPI.
+
+As requisições são executadas de forma assíncrona utilizando async/await, permitindo aguardar a resposta da API antes de processar os dados retornados.
+
+
+
 ### PokemonApiResponse
+
+Representa apenas os campos utilizados da resposta da PokeAPI.
+
+Campos utilizados:
+
+- id
+- name
+- types
+- height
+- weight
 
 Representa apenas os campos utilizados da resposta da PokeAPI.
 
@@ -211,6 +260,16 @@ Saída:
 ```text
 [OK] Pokémon removido do catálogo.
 ```
+## Scripts
+
+```bash
+npm run dev
+npm run build
+```
+
+- npm run dev: executa o projeto em desenvolvimento.
+- npm run build: compila os arquivos TypeScript.
+
 
 ### Execução completa
 
@@ -227,6 +286,16 @@ Saída:
 
 #4 - charmander | Tipos: fire | Altura: 6 | Peso: 85
 ```
+## Conceitos aplicados
+
+- TypeScript com tipagem explícita.
+- Interfaces para modelagem de dados.
+- Classes e modificadores de acesso.
+- Métodos de array (map, some, filter e forEach).
+- Consumo de API com fetch.
+- Programação assíncrona com async/await.
+- Tratamento de erros com try/catch.
+- Organização em camadas (models, services e main).
 
 ## GitFlow utilizado
 
